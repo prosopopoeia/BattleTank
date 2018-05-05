@@ -47,7 +47,7 @@
 # Precompiled Assets
 SourceArt/**/*.png
 SourceArt/**/*.tga
-
+BattleTank/Content/StarterContent/*
 # Binary Files
 Binaries/*
 
