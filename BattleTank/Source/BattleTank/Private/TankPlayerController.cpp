@@ -15,7 +15,7 @@ void ATankPlayerController::Tick(float DeltaTime)
 
 ATank * ATankPlayerController::GetControlledTank() const
 {
-	UE_LOG(LogTemp, Warning, TEXT("A tank made"));
+	//UE_LOG(LogTemp, Warning, TEXT("A tank made"));
 	return Cast<ATank> (GetPawn());
 }
 
@@ -48,6 +48,7 @@ void ATankPlayerController::AimTowardsCrosshair()
 	FVector HitLocation;//Out param
 	if (GetSightRayHitLocation(HitLocation))
 	{
+		GetControlledTank()->AimAt(HitLocation);
 		UE_LOG(LogTemp, Warning, TEXT("hitdirection: %s"), *HitLocation.ToString());
 	}
 }
